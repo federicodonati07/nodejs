@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #282F44 !important;
+  background-color: #3F0071 !important;
   color: #ECECEC !important;
 }
 
@@ -10,11 +10,42 @@ a {
 }
 
 .navbar-custom{
-  background-color: #282F44 !important;
-  -webkit-box-shadow: 0px 1px 53px 2px #ECECEC;
-  -moz-box-shadow: 0px 1px 53px 2px #ECECEC;
-  -o-box-shadow: 0px 1px 53px 2px #ECECEC;
-  box-shadow: 0px 1px 53px 2px #ECECEC;
+  background-color: #3F0071 !important;
+  -webkit-box-shadow: 0px 1px 53px 2px #FB2576;
+  -moz-box-shadow: 0px 1px 53px 2px #FB2576;
+  -o-box-shadow: 0px 1px 53px 2px #FB2576;
+  box-shadow: 0px 1px 53px 2px #FB2576;
+  border-radius: 10px;
+  border-bottom: 3px solid #FB2576;
+  transition: all 0.5s;
+}
+.navbar-custom:hover{
+  border-bottom: 3px solid white;
+}
+
+.navBtn{
+  background-color: #3F0071;
+  color: #FB2576;
+  border-radius: 10px;
+  border-top: 3px solid #FB2576;
+  border-bottom: 3px solid #FB2576;
+  border-left: 1px solid #FB2576;
+  border-right: 1px solid #FB2576;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.navBtn:hover{
+  background-color: #FB2576;
+  color: white;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  -webkit-box-shadow: 0px 1px 53px 2px #FB2576;
+  -moz-box-shadow: 0px 1px 53px 2px #FB2576;
+  -o-box-shadow: 0px 1px 53px 2px #FB2576;
+  box-shadow: 0px 1px 53px 2px #FB2576;
+  border-radius: 10px;
 }
 
 footer{
@@ -24,20 +55,43 @@ footer{
   color: #FFF7D4;
   border-radius:  20%;
   text-align: center;
-  -webkit-box-shadow: 0px 1px 53px 2px #ECECEC;
-  -moz-box-shadow: 0px 1px 53px 2px #ECECEC;
-  -o-box-shadow: 0px 1px 53px 2px #ECECEC;
-  box-shadow: 0px 1px 53px 2px #ECECEC;
   list-style: none;
-
 }
 .footerdiv a{
   text-decoration: none;
-  color: #E6AF2E;
+  color: white;
   transition: all 1.0s; 
 }
 .footerdiv a:hover{
   margin: 10px;
   font-size:  20px;
-  color: #ECECEC;
+  color: #FB2576;
+}
+
+.paragraphIntroIndex{
+  text-align: center;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  font-size: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 50px;
+}
+.paragraphIntroIndexMiddle{
+  text-align: center;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  font-size: 20px;
+  margin: 50px;
+}
+.paragraphIntroIndexFinal{
+  text-align: center;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 20px;
+  margin: 50px;
 }
