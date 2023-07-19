@@ -1,11 +1,12 @@
 /* LOGIC STATEMENT (redirect, button) */
 $("body").ready(()=>{
     $("#feedback").on("click", ()=>{
+        console.log("feed btn clicked")
         $.ajax({
             url: "/feedback",
             type: "GET",
             success: (data)=>{
-                console.log("url changed: ", data.callback_data)
+                window.location.href = "/feedback"
             },
             error: (error)=>{
                 console.error("Errore durante la chiamata AJAX: ", error)

@@ -4,16 +4,15 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'TAL' });
+  res.render('index', { title: 'TAL', url:"/" });
 });
 
 router.get("/feedback", (req, res, next)=>{
-  res.json({callback_data: "/feedback"})
-  res.render("feedback", {title:"TAL-FEEDBACK", name: null, surname: null, class: null})
+  res.render("feedback", {title:"TAL", url:"/feedback"})
 })
 
 router.get("/login", (req, res, next)=>{
-  res.render("login", {title:"TAL-LOGIN", name: null, surname: null, class: null})
+  res.render("login", {title:"TAL", url:"/login"})
 })
 
 module.exports = router;

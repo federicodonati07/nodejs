@@ -16,6 +16,9 @@ html
     nav.navbar.navbar-expand-lg.navbar-custom.sticky-top
       div.container-fluid
         a.navbar-brand(href='/', style="color: #FB2576;") #{title}
+        b
+          a.navbar-brand#breadcrumb-nav(href=url) #{url}
+
         div.container#navBtnSection
           span.navBtn Accedi
           span.navBtn Registrati
