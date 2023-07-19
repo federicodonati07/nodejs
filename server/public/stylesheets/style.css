@@ -5,8 +5,8 @@ body {
   color: #ECECEC !important;
 }
 
-a {
-  color: #00B7FF;
+body a {
+  text-decoration: none;
 }
 
 .navbar-custom{
@@ -18,6 +18,7 @@ a {
   border-radius: 10px;
   border-bottom: 3px solid #FB2576;
   transition: all 0.5s;
+  text-align: center;
 }
 .navbar-custom:hover{
   border-bottom: 3px solid white;
@@ -94,4 +95,7 @@ footer{
   border-bottom-right-radius: 5px;
   font-size: 20px;
   margin: 50px;
+}
+.piia i{
+  color: #FB2576;
 }
