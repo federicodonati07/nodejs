@@ -105,3 +105,44 @@ footer{
 .piia i{
   color: #FB2576;
 }
+
+/* feedback page */
+.feeddiv{
+  margin: 50px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* WebKit (Chrome, Safari) */
+#starrange::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #3F0071, #FFFFFF); /* Gradient from red to green */
+  height: 5px; /* Set the height of the track */
+  border-radius: 2.5px; /* Round the edges */
+}
+
+/* Gecko (Firefox) */
+#starrange::-moz-range-track {
+  background: linear-gradient(to right, #3F0071, #FFFFFF); /* Gradient from red to green */
+  height: 5px; /* Set the height of the track */
+  border-radius: 2.5px; /* Round the edges */
+}
+
+/* Styling the thumb (optional) */
+#starrange::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  width: 20px; /* Set the width of the thumb */
+  height: 20px; /* Set the height of the thumb */
+  background-color: #FB2576; /* Set the color of the thumb */
+  border-radius: 50%; /* Make the thumb round */
+  border: 2px solid #FFFFFF; /* Add a border around the thumb */
+}
+
+#starrange::-moz-range-thumb {
+  width: 20px; /* Set the width of the thumb */
+  height: 20px; /* Set the height of the thumb */
+  background-color: #FB2576; /* Set the color of the thumb */
+  border-radius: 50%; /* Make the thumb round */
+  border: 2px solid #FFFFFF; /* Add a border around the thumb */
+}

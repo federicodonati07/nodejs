@@ -1,6 +1,6 @@
-extends layout
+extends mainpagelayout
 
 block content
-  h1= message
-  h2= error.status
+  pre= message
+  = error.status
   pre #{error.stack}
