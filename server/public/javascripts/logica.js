@@ -14,79 +14,31 @@ $("body").ready(()=>{
         })
     })
     
-    $("#starrange").on("input", ()=>{
-        let starContainer = $("#container-star")
-        while(starContainer.firstChild){
-            firstChild.removeChild(firstChild)
-        }
-        let starVal = $("#starrange").val()
-        let emptyStar = $("<i class='bi bi-star'>")
-        let halfStar = $("<i class='bi bi-star-half'>")
-        let fillStar = $("<i class='bi bi-star-fill'>")
-        starVal = (starVal-0.5)+1
+    $("#starrange").on("input", () => {
+        let starContainer = $("#container-star");
+        starContainer.empty(); // Rimuove tutti i figli da starContainer
+    
+        let starVal = parseFloat($("#starrange").val()); // Converti il valore a virgola mobile
+        let emptyStar = $("<i class='bi bi-star'>");
+        let halfStar = $("<i class='bi bi-star-half'>");
+        let fillStar = $("<i class='bi bi-star-fill'>");
         
-        switch(starVal){
-            case 0.5:
-                matrice = [0.5, 0, 0, 0, 0]
-                break;
-            
-            case 1:
-                matrice = [1, 0, 0, 0, 0]
-                break;
-
-            case 1.5:
-                matrice = [1, 0.5, 0, 0, 0]
-                break;
-
-            case 2:
-                matrice = [1, 1, 0, 0, 0]
-                break;
-
-            case 2.5:
-                matrice = [1, 1, 0.5, 0, 0]
-                break;
-
-            case 3:
-                matrice = [1, 1, 1, 0, 0]
-                break;
-
-            case 3.5:
-                matrice = [1, 1, 1, 0.5, 0]
-                break;
-
-            case 4:
-                matrice = [1, 1, 1, 1, 0]
-                break;
-            
-            case 4.5:
-                matrice = [1, 1, 1, 1, 0.5]
-                break;
-
-            case 5:
-                matrice = [1, 1, 1, 1, 1]
-                break;
-
-            default:
-                matrice = [0.5, 0, 0, 0, 0]
-                break;
+        // Calcola il numero di stelle piene, mezze e vuote
+        let fullStars = Math.floor(starVal);
+        let hasHalfStar = starVal % 1 !== 0;
+        let emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+    
+        // Aggiungi le stelle al contenitore
+        for (let i = 0; i < fullStars; i++) {
+            starContainer.append(fillStar.clone());
         }
-
-        starArray = []
-
-        for(x=0; x<matrice.length; x++){
-            if(matrice[x] == 0){
-                starArray.push(emptyStar)
-
-            }else if(matrice[x] == 0.5){
-                starArray.push(halfStar)
-
-            }else if(matrice[x] == 1){
-                starArray.push(fillStar)
-            }
+    
+        if (hasHalfStar) {
+            starContainer.append(halfStar.clone());
         }
-
-        for(i=0; i<starArray.length; i++){
-            starContainer.append(starArray[i])
+    
+        for (let i = 0; i < emptyStars; i++) {
+            starContainer.append(emptyStar.clone());
         }
-    })
+    });
 })

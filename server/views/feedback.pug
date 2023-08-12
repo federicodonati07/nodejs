@@ -1,8 +1,28 @@
 extends mainpagelayout
 
 block content
-    div.container.feeddiv
-        label#starrangelabel(for="customRange3" class="form-label") Recensisci:
-        div.container#container-star
-            
-        input#starrange(type="range" class="form-range" min="0" max="5" step="0.5" value="0")
+    div.container-fluid.feeddiv
+        h1#starrangelabel(for="customRange3" class="form-label") Feedbakc
+
+        div.container-fluid.Section
+            h3 Valutazione
+            div.container-fluid#container-star
+                each _ in [1, 2, 3, 4, 5]
+                    i(class='bi bi-star')
+                
+            input#starrange(type="range" class="form-range" min="0" max="5" step="0.5" value="0")
+
+            h3 Commento
+
+            div.container-fluid#container-comment
+                .form-floating.mb-3
+                    textarea.form-control#FeedbackTextarea.custom-shadow(, placeholder='Inserisci il tuo commento...', maxlength='250' oninput='addShadow()')
+                    label(for='FeedbackTextarea') Commento - (max 250 caratteri)
+
+
+            div.container-fluid#container-submit
+                span.navBtn#SendFeedback
+                    i(class='bi bi-send-fill')
+                    | Invia feedback
+
+

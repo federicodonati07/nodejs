@@ -114,6 +114,22 @@ footer{
   border-right: 1px solid white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  text-align: center;
+  margin: 50px;
+}
+#starrangelabel{
+  text-align: center;
+}
+.Section{
+  width: 200px;
+  margin-bottom: 5px;
+  border-top: 1px solid white;
+
+  border-bottom: 1px solid white;
+
+}
+#starrange{
+  width: 150px;
 }
 /* WebKit (Chrome, Safari) */
 #starrange::-webkit-slider-runnable-track {
@@ -145,4 +161,27 @@ footer{
   background-color: #FB2576; /* Set the color of the thumb */
   border-radius: 50%; /* Make the thumb round */
   border: 2px solid #FFFFFF; /* Add a border around the thumb */
+}
+
+#container-star{
+  color: #FB2576;
+}
+
+#FeedbackTextarea{
+  color: #FB2576;
+  border: 1px solid #FB2576;
+  background-color: #3F0071;
+  transition: all ease 0.5s;
+  box-shadow: none;
+}
+#FeedbackTextarea:hover{
+  -webkit-box-shadow: 0px 1px 53px 2px #FB2576;
+  -moz-box-shadow: 0px 1px 53px 2px #FB2576;
+  -o-box-shadow: 0px 1px 53px 2px #FB2576;
+  box-shadow: 0px 1px 53px 2px #FB2576;
+}
+
+#container-submit{
+  text-align: center;
+  margin-top: 50px;
 }
