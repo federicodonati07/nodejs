@@ -13,6 +13,34 @@ $("body").ready(()=>{
             }
         })
     })
+
+    $("#login").on("click", ()=>{ // login btn page change
+        console.log("login btn clicked")
+        $.ajax({
+            url: "/login",
+            type: "GET",
+            success: (data)=>{
+                window.location.href = "/login"
+            },
+            error: (error)=>{
+                console.error("Errore durante la chiamata AJAX: ", error)
+            }
+        })
+    })
+
+    $("#singup").on("click", ()=>{ // singup btn page change
+        console.log("singup btn clicked")
+        $.ajax({
+            url: "/singup",
+            type: "GET",
+            success: (data)=>{
+                window.location.href = "/singup"
+            },
+            error: (error)=>{
+                console.error("Errore durante la chiamata AJAX: ", error)
+            }
+        })
+    })
     
     $("#starrange").on("input", () => {
         let starContainer = $("#container-star");

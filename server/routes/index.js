@@ -15,4 +15,8 @@ router.get("/login", (req, res, next)=>{
   res.render("login", {title:"TAL", url:"/login"})
 })
 
+router.get("/singup", (req, res, next)=>{
+  res.render("singup", {title:"TAL", url:"/singup"})
+})
+
 module.exports = router;
