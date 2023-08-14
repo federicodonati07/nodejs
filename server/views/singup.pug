@@ -1,4 +1,17 @@
 extends mainpagelayout
 
 block content
-    h1 SINGUP
+    div.container-fluid.feeddiv
+        h1#starrangelabel(for="customRange3" class="form-label") Singup
+
+        div.container-fluid.Section
+            div.container-fluid#container-comment
+                .form-floating.mb-3
+                    textarea#UsernameInputRegister.form-control.custom-shadow.input-std-style(placeholder='Inserisci il tuo username...', maxlength='25' oninput='addShadow()')
+                    label(for='UsernameInputRegister') Username - (max 25 caratteri)
+
+
+            div.container-fluid#container-submit
+                span.navBtn#Send-Singup
+                    i(class='bi bi-send-fill')
+                    | Invia feedback
